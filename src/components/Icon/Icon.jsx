@@ -1,0 +1,68 @@
+import {
+  BookOpen,
+  Footprints,
+  Compass,
+  Sprout,
+  Blocks,
+  Pencil,
+  Puzzle,
+  GraduationCap,
+  Waves,
+  Trophy,
+  Tent,
+  Bus,
+  Globe,
+  PiggyBank,
+  Sparkles,
+  MapPin,
+  Phone,
+  Menu,
+  X,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle2,
+  AlertCircle,
+  Loader2,
+  Clock,
+  ZoomIn,
+} from 'lucide-react'
+import { InstagramGlyph, FacebookGlyph } from './SocialIcons'
+
+const ICONS = {
+  bookOpen: BookOpen,
+  footprints: Footprints,
+  compass: Compass,
+  sprout: Sprout,
+  blocks: Blocks,
+  pencil: Pencil,
+  puzzle: Puzzle,
+  graduation: GraduationCap,
+  waves: Waves,
+  trophy: Trophy,
+  tent: Tent,
+  bus: Bus,
+  globe: Globe,
+  piggyBank: PiggyBank,
+  sparkles: Sparkles,
+  mapPin: MapPin,
+  phone: Phone,
+  instagram: InstagramGlyph,
+  facebook: FacebookGlyph,
+  menu: Menu,
+  close: X,
+  arrowRight: ArrowRight,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
+  checkCircle: CheckCircle2,
+  alertCircle: AlertCircle,
+  loader: Loader2,
+  clock: Clock,
+  zoomIn: ZoomIn,
+}
+
+export default function Icon({ name, className = '', strokeWidth = 1.8, ...rest }) {
+  const Component = ICONS[name]
+  if (!Component) return null
+  return <Component className={className} strokeWidth={strokeWidth} aria-hidden="true" {...rest} />
+}
